@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Special Surprise</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" media="screen">
+
+<meta name="robots" content="noindex,follow" />
+</head>
+
+<body style="text-align: center; padding-left: 360px; padding-top:200px; background-color: royalblue;">
+	<div style="align-self: center;">
+		<h2 style="text-align: left;"><b>Click on given Video to view this</b></h2>
+	</div>
+
+	<video width="640" height="267" poster="media/cars.jpg">
+		<source src="media/cars.mp4" type="video/mp4">
+	</video>
+
+	<script>
+	$(document).ready(function() {
+		$('video').mediaelementplayer({
+			alwaysShowControls: false,
+			videoVolume: 'horizontal',
+			features: ['playpause','progress','volume','fullscreen']
+		});
+	});
+	</script>
+
+</body>
+
+</html>
